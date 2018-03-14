@@ -16,12 +16,8 @@ public class ImportantLonelyTweet extends LonelyTweet {
 
 	@Override
 	public boolean isValid() {
-		if (tweetBody.trim().length() == 0
-				|| tweetBody.trim().length() > 20) {
-			return false;
-		}
-
-		return true;
+		return !(tweetBody.trim().length() == 0
+				|| tweetBody.trim().length() > 20);
 	}
 
 	@Override
@@ -31,7 +27,7 @@ public class ImportantLonelyTweet extends LonelyTweet {
 		return string;
 	}
 
-	public String getTweetBody() {
+	String getTweetBody() {
 		return tweetBody.toUpperCase();
 	}
 }

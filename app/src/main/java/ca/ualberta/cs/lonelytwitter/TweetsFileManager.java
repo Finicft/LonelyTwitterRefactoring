@@ -14,13 +14,17 @@ import android.util.Log;
 
 import ca.ualberta.cs.lonelytweet.LonelyTweet;
 
-public class TweetsFileManager {
+class TweetsFileManager {
 
-	public static final String FILE_NAME = "file.sav";
-	private Context ctx;
+	private static final String FILE_NAME = "file.sav";
+	private final Context ctx;
 
 	public TweetsFileManager(Context ctx) {
 		this.ctx = ctx;
+	}
+
+	private static String getFileName() {
+		return FILE_NAME;
 	}
 
 	@SuppressWarnings("unchecked")

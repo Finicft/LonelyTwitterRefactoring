@@ -10,10 +10,10 @@ import java.util.Date;
 
 abstract public class LonelyTweet implements Serializable {
     private static final long serialVersionUID = 1L;
-    protected Date tweetDate;
-    protected String tweetBody;
+    Date tweetDate;
+    String tweetBody;
 
-    public Date getTweetDate() {
+    Date getTweetDate() {
         return tweetDate;
     }
 
@@ -21,7 +21,7 @@ abstract public class LonelyTweet implements Serializable {
         this.tweetDate = tweetDate;
     }
 
-    public String getTweetBody() {
+    String getTweetBody() {
         return tweetBody;
     }
 
